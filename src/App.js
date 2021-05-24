@@ -1,22 +1,48 @@
-
+import React , { useState } from 'react';
+import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
 import './App.css';
 
+
+
 function App() {
+  const [counter, setCounter] = useState(0);
+
+  const onStart = () => {
+    setCounter(counter + 1);
+  }
+
+  const onStop = () => {
+    console.log('stop');
+  }
+
+  const onReset = () => {
+    setCounter(0);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
+      <div className="App-div">
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          {counter}
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Grid
+          container
+          justify="center"
         >
-          Learn React
-        </a>
-      </header>
+          <Grid
+            xs={3}
+            container
+            direction="row"
+            justify="space-evenly"
+            alignItems="center"
+          >
+            <Button variant="contained" onClick={onStart}>Start</Button>
+            <Button variant="contained" onClick={onStop}>Stop</Button>
+            <Button variant="contained" onClick={onReset}>Reset </Button>
+          </Grid>
+        </Grid>
+      </div>
     </div>
   );
 }
