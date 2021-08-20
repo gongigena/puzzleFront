@@ -17,11 +17,11 @@
   color:black;
 }
 
-.squareGreen {
+.squareRed {
   width: 20px;
   height: 20px;
   margin: 2px;
-  background-color: rgb(70, 209, 70);
+  background-color: rgb(255, 0, 0);
   border: 2.5px solid black;
 }
 

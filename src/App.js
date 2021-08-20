@@ -30,7 +30,7 @@ function App() {
     var divs = [];
     for(var i = 0; i < 15; i++){
       divs.push(
-        <div className={(i < counter) ? "squareGreen": "square"}></div>
+        <div className={(i < counter) ? "squareRed": "square"}></div>
       );
     }
     return divs;
